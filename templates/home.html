@@ -17,7 +17,7 @@
 </head>
 <body>
   <div class="container">
-    <h1 class="text-center mt-2 mb-4"">Careers</h1>
+    <h1 class="text-center mt-2 mb-4"">{{ company_name }} Careers</h1>
     <!-- <img src="http://www.htmldog.com/badge1.gif"> -->
     <img class="img-fluid" id="banner" src="https://2c3b9196-777d-4a11-a89f-937eec68a656-00-13p025c4569is.spock.replit.dev/static/banner.jpg" height="200"">
     <h2 class="text-center mt-2 mb-4">About Jovian</h2>
@@ -25,7 +25,11 @@
       Hello there, you'll learn about the job openings at Flatiron School here!
     </p>
     <h2 class="text-center mt-2 mb-4">Open positions</h2>
-    <p>TODO - Show the jobs here</p>
+    <div>
+      {% for job in jobs %}
+        {% include 'jobitem.html' %}
+      {% endfor %}
+    </div>
 
     <div class="text-center">
       <button class="btn btn-primary btn-lg">Contact us</button>
